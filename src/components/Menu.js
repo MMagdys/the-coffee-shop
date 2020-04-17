@@ -60,7 +60,7 @@ function RenderMenuItem({ drink, onClick}){
             <CardActionArea>
                 <CardMedia
                 className={classes.media}
-                image={drink.image}
+                image={`/the-coffee-shop/${drink.image}`}
                 title={drink.name}
                 />
                 <CardContent>

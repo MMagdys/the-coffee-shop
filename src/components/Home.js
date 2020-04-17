@@ -73,7 +73,7 @@ function RenderCardMedia({item, isLoading, errmsg}){
             <Link to={`/menu/${item.id}`} style={{textDecoration: 'none'}}>
                 <CardMedia
                 className={classes.media}
-                image={item.image}
+                image={`/the-coffee-shop/${item.image}`}
                 title={item.name}
                 />
                 <CardContent>
@@ -140,7 +140,7 @@ function HoriziontalCard({item, isLoading, errmsg}){
                 </div>
                 <CardMedia
                     className={classes.cover}
-                    image={item.image}
+                    image={`/the-coffee-shop/${item.image}`}
                     title={item.name}
                 />
                 </Card>

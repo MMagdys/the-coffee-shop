@@ -13,7 +13,7 @@ function RenderDrink({drink}) {
 
     return(
         <Card className="col-12 col-md-5 m-1">
-            <CardImg width="100%" object src={drink.image} alt={drink.name} />
+            <CardImg width="100%" object src={`/the-coffee-shop/${drink.image}`} alt={drink.name} />
             <CardBody>
                 <CardTitle>{drink.name}</CardTitle>
                 <CardText>{drink.description}</CardText>
