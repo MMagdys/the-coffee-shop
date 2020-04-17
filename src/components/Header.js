@@ -31,7 +31,7 @@ class Header extends Component{
             <Navbar dark expand="md">
                 <div className="container">
                     <NavbarToggler onClick={this.togglenav} />
-                    <NavbarBrand className="mr-auto" href="/">
+                    <NavbarBrand className="mr-auto" href="/the-coffee-shop/">
                         {/* <img src="assets/images/logo.png" height="30" width ="41"
                         alt="Ristorante Con Fusion" /> */}
                         THE COFFEE SHOP
