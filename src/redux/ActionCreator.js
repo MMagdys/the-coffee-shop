@@ -2,11 +2,11 @@ import * as ActionTypes from './ActionTypes';
 import {DRINKS} from '../shared/drinks'
 
 
-export const addComment = (dishId, rating, author, comment) => ({
+export const addComment = (drinkId, rating, author, comment) => ({
 
     type: ActionTypes.ADD_COMMENT,
     payload: {
-        dishId: dishId,
+        drinkId: drinkId,
         rating: rating,
         author: author,
         comment: comment

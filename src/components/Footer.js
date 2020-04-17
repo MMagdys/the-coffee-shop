@@ -1,5 +1,4 @@
-import React, {Component} from 'react';
-import {Link} from 'react-router-dom'
+import React from 'react';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import EmailIcon from '@material-ui/icons/Email';

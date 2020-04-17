@@ -2,162 +2,114 @@ export const COMMENTS =
 [
     {
         id: 0,
-        dishId: 0,
+        drinkId: 0,
         rating: 5,
-        comment: "Imagine all the eatables, living in conFusion!",
-        author: "John Lemon",
-        date: "2012-10-16T17:57:28.556094Z"
+        comment: "Awesome drinks and lovely place!",
+        author: "John",
+        date: "2020-02-06T17:57:28.556094Z"
     },
     {
         id: 1,
-        dishId: 0,
+        drinkId: 0,
         rating: 4,
-        comment: "Sends anyone to heaven, I wish I could get my mother-in-law to eat it!",
-        author: "Paul McVites",
-        date: "2014-09-05T17:57:28.556094Z"
+        comment: "Great drinks and nice experience!",
+        author: "Paul",
+        date: "2020-01-05T17:57:28.556094Z"
     },
     {
         id: 2,
-        dishId: 0,
+        drinkId: 0,
         rating: 3,
-        comment: "Eat it, just eat it!",
-        author: "Michael Jaikishan",
-        date: "2015-02-13T17:57:28.556094Z"
+        comment: "Amazing drinks!",
+        author: "Michael",
+        date: "2020-02-13T17:57:28.556094Z"
     },
     {
         id: 3,
-        dishId: 0,
+        drinkId: 0,
         rating: 4,
-        comment: "Ultimate, Reaching for the stars!",
-        author: "Ringo Starry",
-        date: "2013-12-02T17:57:28.556094Z"
+        comment: "Great staff!",
+        author: "Harold",
+        date: "2019-12-02T17:57:28.556094Z"
     },
     {
         id: 4,
-        dishId: 0,
+        drinkId: 0,
         rating: 2,
-        comment: "It's your birthday, we're gonna party!",
-        author: "25 Cent",
-        date: "2011-12-02T17:57:28.556094Z"
+        comment: "Not bad!",
+        author: "Sara",
+        date: "2019-12-02T17:57:28.556094Z"
     },
     {
-        id: 5,
-        dishId: 1,
+        id: 0,
+        drinkId: 1,
         rating: 5,
-        comment: "Imagine all the eatables, living in conFusion!",
-        author: "John Lemon",
-        date: "2012-10-16T17:57:28.556094Z"
+        comment: "Awesome drinks and lovely place!",
+        author: "John",
+        date: "2020-02-06T17:57:28.556094Z"
     },
     {
-        id: 6,
-        dishId: 1,
-        rating: 4,
-        comment: "Sends anyone to heaven, I wish I could get my mother-in-law to eat it!",
-        author: "Paul McVites",
-        date: "2014-09-05T17:57:28.556094Z"
-    },
-    {
-        id: 7,
-        dishId: 1,
+        id: 2,
+        drinkId: 1,
         rating: 3,
-        comment: "Eat it, just eat it!",
-        author: "Michael Jaikishan",
-        date: "2015-02-13T17:57:28.556094Z"
+        comment: "Amazing drinks!",
+        author: "Sally",
+        date: "2020-02-13T17:57:28.556094Z"
     },
     {
-        id: 8,
-        dishId: 1,
+        id: 3,
+        drinkId: 1,
         rating: 4,
-        comment: "Ultimate, Reaching for the stars!",
-        author: "Ringo Starry",
-        date: "2013-12-02T17:57:28.556094Z"
+        comment: "Happy Black Coffee!",
+        author: "Harold",
+        date: "2019-12-02T17:57:28.556094Z"
     },
     {
-        id: 9,
-        dishId: 1,
-        rating: 2,
-        comment: "It's your birthday, we're gonna party!",
-        author: "25 Cent",
-        date: "2011-12-02T17:57:28.556094Z"
+        id: 4,
+        drinkId: 1,
+        rating: 5,
+        comment: "Best Coffee ever!",
+        author: "Sara",
+        date: "2019-12-02T17:57:28.556094Z"
     },
     {
         id: 10,
-        dishId: 2,
+        drinkId: 2,
         rating: 5,
-        comment: "Imagine all the eatables, living in conFusion!",
-        author: "John Lemon",
-        date: "2012-10-16T17:57:28.556094Z"
+        comment: "Best Coffee ever!",
+        author: "Sara",
+        date: "2019-12-02T17:57:28.556094Z"
     },
     {
         id: 11,
-        dishId: 2,
+        drinkId: 2,
         rating: 4,
-        comment: "Sends anyone to heaven, I wish I could get my mother-in-law to eat it!",
-        author: "Paul McVites",
-        date: "2014-09-05T17:57:28.556094Z"
+        comment: "perfect Espresso!",
+        author: "Harold",
+        date: "2019-12-02T17:57:28.556094Z"
     },
     {
         id: 12,
-        dishId: 2,
-        rating: 3,
-        comment: "Eat it, just eat it!",
-        author: "Michael Jaikishan",
-        date: "2015-02-13T17:57:28.556094Z"
+        drinkId: 2,
+        rating: 2,
+        comment: "Not bad!",
+        author: "Sara",
+        date: "2019-12-02T17:57:28.556094Z"
     },
     {
         id: 13,
-        dishId: 2,
-        rating: 4,
-        comment: "Ultimate, Reaching for the stars!",
-        author: "Ringo Starry",
-        date: "2013-12-02T17:57:28.556094Z"
+        drinkId: 2,
+        rating: 5,
+        comment: "Awesome drinks and lovely place!",
+        author: "John",
+        date: "2020-02-06T17:57:28.556094Z"
     },
     {
         id: 14,
-        dishId: 2,
-        rating: 2,
-        comment: "It's your birthday, we're gonna party!",
-        author: "25 Cent",
-        date: "2011-12-02T17:57:28.556094Z"
-    },
-    {
-        id: 15,
-        dishId: 3,
-        rating: 5,
-        comment: "Imagine all the eatables, living in conFusion!",
-        author: "John Lemon",
-        date: "2012-10-16T17:57:28.556094Z"
-    },
-    {
-        id: 16,
-        dishId: 3,
-        rating: 4,
-        comment: "Sends anyone to heaven, I wish I could get my mother-in-law to eat it!",
-        author: "Paul McVites",
-        date: "2014-09-05T17:57:28.556094Z"
-    },
-    {
-        id: 17,
-        dishId: 3,
+        drinkId: 2,
         rating: 3,
-        comment: "Eat it, just eat it!",
-        author: "Michael Jaikishan",
-        date: "2015-02-13T17:57:28.556094Z"
+        comment: "nice!",
+        author: "David",
+        date: "2019-12-31T17:57:28.556094Z"
     },
-    {
-        id: 18,
-        dishId: 3,
-        rating: 4,
-        comment: "Ultimate, Reaching for the stars!",
-        author: "Ringo Starry",
-        date: "2013-12-02T17:57:28.556094Z"
-    },
-    {
-        id: 19,
-        dishId: 3,
-        rating: 2,
-        comment: "It's your birthday, we're gonna party!",
-        author: "25 Cent",
-        date: "2011-12-02T17:57:28.556094Z"
-    }
 ]

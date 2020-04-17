@@ -1,7 +1,6 @@
 import React from 'react';
-import {  CardImg, CardText, CardTitle, CardSubtitle, CardBody} from 'reactstrap';
 import {Loading} from './Loading';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
@@ -12,7 +11,7 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import Paper from '@material-ui/core/Paper';
 import TextField from '@material-ui/core/TextField';
-
+import {Link} from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
   card_root: {
@@ -71,6 +70,7 @@ function RenderCardMedia({item, isLoading, errmsg}){
         <Grid item xs={12} sm={6} md={4}>
             <Card align="left" className={classes.card_root}>
             <CardActionArea>
+            <Link to={`/menu/${item.id}`} style={{textDecoration: 'none'}}>
                 <CardMedia
                 className={classes.media}
                 image={item.image}
@@ -84,14 +84,17 @@ function RenderCardMedia({item, isLoading, errmsg}){
                 {item.description}
                 </Typography>
                 </CardContent>
+            </Link>
             </CardActionArea>
             <CardActions>
                 <Button size="small" style={{color: '#990000'}}>
                 Share
                 </Button>
+                <Link to={`/menu/${item.id}`} style={{textDecoration: 'none'}}>
                 <Button size="small" style={{color: '#990000'}}>
                 Learn More
                 </Button>
+                </Link>
             </CardActions>
             </Card>
         </Grid>
@@ -103,7 +106,6 @@ function RenderCardMedia({item, isLoading, errmsg}){
 function HoriziontalCard({item, isLoading, errmsg}){
 
     const classes = useStyles();
-    const theme = useTheme();
 
     if (isLoading) {
         return(
@@ -127,6 +129,13 @@ function HoriziontalCard({item, isLoading, errmsg}){
                     <Typography variant="subtitle1" color="textSecondary" style={{margin: '1rem'}}>
                         {item.description}
                     </Typography>
+                    <div align="right">
+                    <Link to={`/menu/${item.id}`} style={{textDecoration: 'none', marginRight: '1rem'}}>
+                        <Button variant="contained" style={{backgroundColor: '#990000' ,color: 'white'}}>
+                        Learn More
+                        </Button>
+                    </Link>
+                    </div>
                     </CardContent>
                 </div>
                 <CardMedia
@@ -144,7 +153,6 @@ function HoriziontalCard({item, isLoading, errmsg}){
 function JoinMailingList(){
 
     const classes = useStyles();
-    const theme = useTheme();
 
     return(
         <Grid item xs={12} md={6}>
@@ -174,7 +182,7 @@ function JoinMailingList(){
 }
 
 function Home(props) {
-    const classes = useStyles();
+
     return(
         <div align="center" style={{margin: '3rem'}}>
             <Grid container >
@@ -186,9 +194,9 @@ function Home(props) {
                           
             <Grid container  spacing={3}>
       
-                <RenderCardMedia item={props.dish} 
-                    isLoading={props.dishesLoading} 
-                    errmsg={props.dishesErrmsg}/>
+                <RenderCardMedia item={props.fearuredDrink} 
+                    isLoading={props.drinkLoading} 
+                    errmsg={props.drinkErrmsg}/>
         
                 <JoinMailingList />
         
