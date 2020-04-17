@@ -1,7 +1,7 @@
 {
   "name": "the-coffee-shop",
   "version": "0.1.0",
-  "homepage": "http://mmagdys.github.io/the-coffee-shop",
+  "homepage": "http://mmagdys.github.io/projects/the-coffee-shop/",
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.9.10",
