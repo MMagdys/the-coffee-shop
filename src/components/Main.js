@@ -9,7 +9,7 @@ import { createMuiTheme } from '@material-ui/core/styles';
 
 import {Switch, Route, Redirect, withRouter} from 'react-router-dom';
 import {connect} from 'react-redux';
-import { addComment, fetchDishes } from '../redux/ActionCreator';
+import { addComment, fetchDrinks } from '../redux/ActionCreator';
 
 const theme = createMuiTheme({
 	palette: {
@@ -26,10 +26,8 @@ const theme = createMuiTheme({
 
 const mapStateToProps = state => {
 	return {
-		dishes: state.dishes,
+		drinks: state.drinks,
 		comments: state.comments,
-		promotions: state.promotions,
-		leaders: state.leaders
 	}
 }
 
@@ -37,7 +35,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = (dispatch) => ({
 
 	addComment: (dishId, rating, author, comment) => dispatch(addComment(dishId, rating, author, comment)),
-	fetchDishes: () => {dispatch(fetchDishes())}
+	fetchDrinks: () => {dispatch(fetchDrinks())}
 });
 
 
@@ -49,7 +47,7 @@ class Main extends Component{
 	}
 
 	componentDidMount() {
-		this.props.fetchDishes();
+		this.props.fetchDrinks();
 	}
 
 	
@@ -58,22 +56,22 @@ class Main extends Component{
 
 		const HomePage = () => {
 			return(
-				<Home dish={this.props.dishes.dishes.filter((dish) => dish.featured)[0]}
-					dishesLoading={this.props.dishes.isLoading}
-					dishesErrmsg={this.props.dishes.errmsg}
-					promotion={this.props.dishes.dishes.filter((dish) => dish.label === 'New')[0]}
-					promotionsLoading={this.props.dishes.isLoading}
-					promotionsErrmsg={this.props.dishes.errmsg}
-					leader={this.props.leaders.filter((leader) => leader.featured)[0]}/>
+				<Home dish={this.props.drinks.drinks.filter((dish) => dish.featured)[0]}
+					dishesLoading={this.props.drinks.isLoading}
+					dishesErrmsg={this.props.drinks.errmsg}
+					promotion={this.props.drinks.drinks.filter((dish) => dish.label === 'New')[0]}
+					promotionsLoading={this.props.drinks.isLoading}
+					promotionsErrmsg={this.props.drinks.errmsg}
+					/>
 			);
 		}
 
 
 		const DishWithId = ({match}) => {
 			return(
-				<DishDetail dish={this.props.dishes.dishes.filter((dish) => dish.id === parseInt(match.params.dishId, 10))[0]} 
-					isLoading={this.props.dishes.isLoading}
-					errmsg={this.props.dishes.errmsg}
+				<DishDetail dish={this.props.drinks.drinks.filter((dish) => dish.id === parseInt(match.params.dishId, 10))[0]} 
+					isLoading={this.props.drinks.isLoading}
+					errmsg={this.props.drinks.errmsg}
 					comments={this.props.comments.filter((comment) => comment.dishId === parseInt(match.params.dishId, 10))}
 					addComment={this.props.addComment}
 				/>
@@ -87,7 +85,7 @@ class Main extends Component{
 		
 				<Switch>
 					<Route path="/home" component={HomePage} />
-					<Route exact path="/menu" component={ () => <Menu dishes={this.props.dishes} /> } />
+					<Route exact path="/menu" component={ () => <Menu dishes={this.props.drinks} /> } />
 					<Route path="/menu/:dishId" component={ DishWithId } />
 					<Route exact path="/contactus" component={Contact} />
 					<Redirect to="/home" />
